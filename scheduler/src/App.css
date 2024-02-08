@@ -131,16 +131,22 @@ table {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 ul{
   display: flex;
   justify-content: space-between;
   gap: 15px;
+  flex-wrap: wrap;
 
 }
 
 a {
   font-family: "Noto Sans Math", sans-serif;
   font-size: 20px;
+}
+
+div.main-grid{
+  display: grid;
 }
