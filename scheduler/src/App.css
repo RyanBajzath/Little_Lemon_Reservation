@@ -155,8 +155,74 @@ h2 {
   font-family: "Markazi Text", serif;
   font-size: 16px;
 }
-.button {
-  color: #f4ce14;
+button {
+  background-color: #f4ce14;
   border-radius: 16px;
-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 60px;
+}
+.specialOptionImage {
+  width: 256px;
+  height: 185px;
+}
+.cost {
+  color: #ee9972;
+}
+
+.callToActionTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: #495e57;
+}
+
+.callToActionLeft {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.callToArmsImg {
+  height: 427px;
+  width: 375px;
+  border-radius: 16px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  align-items: self-start;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.footerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.footerListItems {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.footerImg {
+  height: 300px;
+  width: 160px;
+}
+h4 {
+  font-family: "Noto Sans Math", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #495e57;
 }

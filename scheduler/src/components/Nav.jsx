@@ -1,6 +1,9 @@
+//the top-level navigation of the website, sometimes referred to as the navbar
+
 //Importing for React
 import styled from "styled-components";
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
 //Importing icons/svgs
 import { ReactComponent as Logo } from "../images/Logo.svg";
@@ -17,10 +20,10 @@ export default function Nav() {
         {/* The ul will house link items which will be on the riht side with space between */}
         <ul>
           <li>
-            <a>Home</a>
+           <Link to="/" className="nav-item"> Homepage </Link>
           </li>
           <li>
-            <a>About</a>
+          <Link to="/booking" className="nav-item"> booking </Link>
           </li>
           <li>
             <a>menu</a>

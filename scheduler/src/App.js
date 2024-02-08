@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 //Importing React portions
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 //This seems to be a simple application that does not require routing at the momment.
 function App() {
