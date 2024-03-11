@@ -1,10 +1,12 @@
 //sometimes referred to as the jumbotron or the hero, this component is the call-to-action section that guides the user to click a call-to-action button while enticing them to do so in as few words as possible
+import logo from "../images/restauranfood.jpg";
+
 export default function CallToAction() {
   return (
     <>
-    <main>
+<div className="marginBottom">
       <section className="callToActionTotal">
-        <div class="background-color"></div>
+
         <section className="callToActionLeft">
           <div className="title">
             <h1>Little Lemon</h1>
@@ -18,10 +20,10 @@ export default function CallToAction() {
           <button>Reserve a table</button>
         </section>
         <section className="callToActionRight">
-          <img className="callToArmsImg"></img>
+          <img className="callToArmsImg" src={logo}></img>
         </section>
       </section>
-      </main>
+      </div>
     </>
   );
 }

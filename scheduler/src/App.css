@@ -89,6 +89,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
+  color: inherit; /* blue colors for links too */
 }
 
 body {
@@ -98,6 +100,7 @@ body {
 ol,
 ul {
   list-style: none;
+  direction: none;
 }
 
 blockquote,
@@ -119,7 +122,7 @@ table {
 }
 
 /* Basic CSS Reset End*/
-.nav {
+nav {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -127,9 +130,12 @@ table {
 
 .navContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  height: 115px;
+
+  width: 80vw;
 }
 
 ul {
@@ -172,18 +178,25 @@ button {
 
 .callToActionTotal {
   display: flex;
-  align-items: center;
+
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
+
+  height: 400px;
   background-color: #495e57;
 }
 
 .callToActionLeft {
   width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  color: aliceblue;
+  justify-content: center;
 }
 
 .title {
@@ -196,20 +209,16 @@ button {
   height: 427px;
   width: 375px;
   border-radius: 16px;
+  border: black 0.5px solid;
 }
-footer {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-  align-items: self-start;
-  margin-left: 10vw;
-  margin-right: 10vw;
+.callToActionRight{
+  margin-bottom: 500px;
 }
+
 .footerList {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
 }
 .footerListItems {
   display: flex;
@@ -219,10 +228,88 @@ footer {
 .footerImg {
   height: 300px;
   width: 160px;
+  object-fit: cover;
+  border: #495e57 1px solid;
 }
 h4 {
   font-family: "Noto Sans Math", sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #495e57;
+}
+.specials {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.specialsTitle {
+  font-family: "Noto Sans Math", sans-serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  margin-bottom: 10vh;
+}
+.specialImage {
+  height: 166px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.specialsContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.specialItem {
+  width: 250px;
+  outline: black 1px solid;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #edefee7c;
+}
+h2 {
+  font-family: "Noto Sans Math", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+.specialItemBio {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+}
+.specialItemHeader {
+  display: flex;
+  justify-content: space-around;
+}
+/* .price{
+  color: #EE9972;
+} */
+.specialItemHeader p:nth-of-type(2) {
+  /* Your desired styles here */
+  color: #ee9972;
+}
+
+h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 32px;
+}
+.footerContainer {
+  display: flex;
+  outline: black solid 2xp;
+  justify-content: space-between;
+  width: 60%;
+  align-items: flex-start;
+}
+footer {
+  display: flex;
+  justify-content: center;
 }
