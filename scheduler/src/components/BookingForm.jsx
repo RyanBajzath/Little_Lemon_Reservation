@@ -1,32 +1,45 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
-export default function BookingForm(){
-const [form, setForm] = useState({
-    reservationDate:"",
-    reservationTime:"",
-    guests:"",
-    occasion:""
+export default function BookingForm(props) {
 
-})
+    function handleChange(event) {
+        let { name, value } = event.target;
+        props.setForm(prevForm => ({ ...prevForm, [name]: value }))
+    }
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(props.form)
+    }
 
-return<>
-    <form style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
-        <label htmlFor="resDate">Reservation date</label>
-<input type="date" value={form.reservationDate} id="resDate"/>
-<label htmlFor="resHour"></label>
-<select id="resHour">
-<option>17:00</option>
-      <option>18:00</option>
-      <option>19:00</option>
-      <option>20:00</option>
-      <option>21:00</option>
-      <option>22:00</option>
-</select>
-<input type="number" />
-<select>
-    <option value="">Birthday</option>
-    <option value="">Anniversary</option>
-</select>
-</form>
-</>
+
+    return <>
+        <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+            <div>
+                <label htmlFor="resDate">Reservation date</label>
+                <input onChange={handleChange} type="date" value={props.form.reservationDate} id="resDate" />
+            </div>
+            <div>
+                <label htmlFor="resHour">Reserve hour</label>
+                <select onChange={handleChange} id="resHour">
+                    {props.availableTimes.map((time) => {
+                        return <option key={time} value={time} >{time}</option>
+                    })}
+                </select>
+            </div>
+            <div>
+                <label htmlFor="numGuest">Number of Guests</label>
+                <input id="numGuest" type="number" onChange={handleChange} />
+            </div>
+            <div>
+                <label htmlFor="occasion">Occasion</label>
+                <select id="occasion" onChange={handleChange}>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" >submit</button>
+            </div>
+        </form>
+    </>
 }
