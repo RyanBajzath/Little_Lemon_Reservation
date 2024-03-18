@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function BookingForm(props) {
-  console.log(props.availableTimes);
+
   function handleChange(event) {
     let { name, value } = event.target;
     props.setForm((prevForm) => ({ ...prevForm, [name]: value }));
